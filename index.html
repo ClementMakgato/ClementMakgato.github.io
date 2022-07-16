@@ -59,7 +59,7 @@
             </div>
 
             <div class="hero-img">
-                <img src="images/myimage.png" alt="Hero Image">
+                <img src="images/heroimage.png" alt="Hero Image">
             </div>
         </section>
 
@@ -68,7 +68,7 @@
 
             <div class="about-container bg-grid">
                 <div class="about-img">
-                    <img src="images/aboutimage.jpg" alt="About Image">
+                    <img src="images/myimage.jpg" alt="About Image">
                 </div>
 
                 <div>
@@ -171,18 +171,20 @@
             <h2 class="section-title">Contact</h2>
 
             <div class="contact-container bg-grid">
-                <form action="https://formsubmit.co/outlawedtc@gmail.com" method="POST" class="contact-form">
+                <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+                <form action="https://formsubmit.co/outlawedtc@gmail.com" target="dummyframe" method="POST" class="contact-form">
                     <!--Honeypot-->
                     <input type="text" name="_honey" style="display: none;">
 
                     <!--Disable Captcha-->
                     <input type="hidden" name="_captcha" value="false">
-                    
 
-                    <input type="text" placeholder="Name" class="contact-input">
-                    <input type="email" placeholder="Email" name="Email" id="email-id" class="contact-input">
-                    <textarea name="text-area" id="text-area-id" cols="0" rows="10" class="contact-input"></textarea>
-                    <button type="submit"class="contact-button button">Submit</button>
+
+
+                    <input type="text" placeholder="Name" class="contact-input" required>
+                    <input type="email" placeholder="Email" name="Email" id="email-id" class="contact-input" required>
+                    <textarea name="text-area" id="text-area-id" cols="0" rows="10" class="contact-input" required></textarea>
+                    <button type="submit" class="contact-button button">Submit</button>
                 </form>
             </div>
         </section>

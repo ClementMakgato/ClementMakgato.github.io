@@ -53,3 +53,29 @@ sr.reveal('.work-img', { interval: 200 })
 
 //Contact section scroll
 sr.reveal('.contact-input', { interval: 200 })
+
+//Contact form handling
+
+function message() {
+    var name = document.getElementById("name-id");
+    var email = document.getElementById("email-id");
+    var text = document.getElementById("text-area-id");
+    const success = document.getElementById("success");
+    const error = document.getElementById("error");
+    if (name.value === '' || email.value === '' || text.value === '') {
+        error.style.display = "block";
+    } else {
+        setTimeout(() => {
+            name.value = "";
+            email.value = "";
+            text.value = "";
+        }, 2000);
+
+        success.style.display = "block";
+    }
+
+    setTimeout(() => {
+        error.style.display = "none";
+        success.style.display = "none";
+    }, 4000);
+}
